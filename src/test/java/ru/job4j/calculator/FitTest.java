@@ -2,6 +2,7 @@ package ru.job4j.calculator;
 
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.*;
+
 class FitTest {
     @Test
     void whenMan180Then92() {
@@ -20,7 +21,7 @@ class FitTest {
     }
 
     @Test
-    void whenMan200Then150() {
+    void whenMan200Then115() {
         short in = 200;
         double expected = 115;
         double out = Fit.manWeight(in);
@@ -28,7 +29,7 @@ class FitTest {
     }
 
     @Test
-    void whenWoman200Then135() {
+    void whenWoman200Then103dot5() {
         short in = 200;
         double expected = 103.5;
         double out = Fit.womanWeight(in);
