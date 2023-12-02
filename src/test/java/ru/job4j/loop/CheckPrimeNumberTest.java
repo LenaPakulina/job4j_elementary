@@ -5,8 +5,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class CheckPrimeNumberTest {
     @Test
-    void whenCheck1thenTrue() {
-        boolean expected = true;
+    void whenCheck1thenFalse() {
+        boolean expected = false;
         boolean out = CheckPrimeNumber.check(1);
         assertThat(out).isEqualTo(expected);
     }
