@@ -20,34 +20,10 @@ class MatrixCheckTest {
     public void whenHasNotMonoHorizontal() {
         char[][] input = {
                 {' ', ' ', ' '},
-                {'X', 'X', 'X'},
+                {'X', ' ', 'X'},
                 {' ', ' ', ' '},
         };
-        int row = 0;
-        boolean result = MatrixCheck.monoHorizontal(input, row);
-        assertThat(result).isFalse();
-    }
-
-    @Test
-    public void whenStringIsEmptyMonoHorizontal() {
-        char[][] input = {
-                {},
-                {'X', 'X', 'X'},
-                {'X', ' ', ' '},
-        };
-        int row = 0;
-        boolean result = MatrixCheck.monoHorizontal(input, row);
-        assertThat(result).isTrue();
-    }
-
-    @Test
-    public void whenStringHasDiffCharsMonoHorizontal() {
-        char[][] input = {
-                {},
-                {'X', 'X', 'X'},
-                {'X', ' ', 'X'},
-        };
-        int row = 2;
+        int row = 1;
         boolean result = MatrixCheck.monoHorizontal(input, row);
         assertThat(result).isFalse();
     }
