@@ -2,22 +2,20 @@ package ru.job4j.array;
 
 public class TwoNumberSum {
     public static int[] getIndexes(int[] array, int target) {
-        int indFirst = 0;
-        int indSecond = indFirst + 1;
-        while ((array[indFirst] + array[indSecond]) != target) {
-            if ((indFirst + 1) == indSecond && indSecond == (array.length - 1)) {
-                return new int[0];
+        int index1 = 0;
+        int index2 = index1 + 1;
+        while (index1 != index2) {
+            if ((array[index1] + array[index2]) == target) {
+                return new int[] {index1, index2};
             }
-
-            int currSum = array[indFirst] + array[indSecond];
-            if (indSecond == (array.length - 1) || currSum > target) {
-                indFirst++;
-                indSecond = indFirst + 1;
+            if (index2 == (array.length - 1)) {
+                index1++;
+                index2 = (index1 != index2) ? index1 + 1 : index2;
             } else {
-                indSecond++;
+                index2++;
             }
         }
-        return new int[] {indFirst, indSecond};
+        return new int[0];
     }
 
     public static int[] getIndexesLoops(int[] array, int target) {
