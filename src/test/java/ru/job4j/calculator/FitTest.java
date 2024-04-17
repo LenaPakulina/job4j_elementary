@@ -37,10 +37,10 @@ class FitTest {
     }
 
     @Test
-    public void testWomanWeightForGivenHeightForWoman() {
-        short height = 165;
-        double expected = 55.75;
-        double actual = Fit.womanWeight(height);
+    public void testManWeightForGivenHeightForMan() {
+        short height = 187;
+        double expected = 100.05;
+        double actual = Fit.manWeight(height);
         assertThat(actual).isEqualTo(expected, withPrecision(0.01));
     }
 }
